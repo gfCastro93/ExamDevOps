@@ -24,7 +24,7 @@ def main():
             opcion = show_menu()
             if opcion is not None and opcion != "4":
                 if opcion == "1":
-                    print(f"Su saldo actual es de:${int(saldo)}")
+                    print(f"Su saldo actual es de: ${int(saldo)}")
                     online = close()
                 if opcion == "2":
                     asaldo = saldo

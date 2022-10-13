@@ -24,7 +24,7 @@ public class Bank {
                 if (opcion != null && !opcion.equals("4")) {
                     switch (opcion) {
                         case "1":
-                            System.out.println("Su saldo actual es de: $" + (int)saldo);
+                            System.out.println("Su saldo actual es de:$" + (int)saldo);
                             online = Exit.close();
                             break;
                         case "2":
