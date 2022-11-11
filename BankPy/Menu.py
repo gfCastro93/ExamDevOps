@@ -28,7 +28,7 @@ def show_menu():
                     count = count + 1
                     print("Ingrese un valor valido\n")
                     if count == 5:
-                        print("Ultimo intento")
+                        print("Ultimo intento!")
                     if count == 6:
                         flag = False
                         return None
