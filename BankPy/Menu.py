@@ -14,15 +14,26 @@ def show_menu():
     while flag:
         opcion = input("Operacion:")
         if len(opcion) < 1:
-            flag = not (re.match("[1-4]", opcion))
-        else:
             count = count + 1
             print("Ingrese un valor valido\n")
-        if count == 5:
-            print("Ultimo intento")
-        if count == 6:
-            opcion = None
-            flag = False
+        else:
+            if len(opcion) > 1:
+                count = count + 1
+                if count == 6:
+                    flag = False
+                    return None
+                print("Ingrese un valor valido\n")
+            else:
+                if re.match("[1-4]", opcion) is None:
+                    count = count + 1
+                    print("Ingrese un valor valido\n")
+                    if count == 5:
+                        print("Ultimo intento!")
+                    if count == 6:
+                        flag = False
+                        return None
+                else:
+                    flag = False
 
     return opcion
 
